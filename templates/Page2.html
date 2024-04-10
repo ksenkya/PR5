@@ -1,0 +1,38 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{% static 'css/uikit.min.css' %}" rel="stylesheet">
+    <script src="{% static 'js/uikit.min.js' %}"></script>
+    <script src="{% static 'js/uikit-icons.min.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукты и услуги</title>
+    <style>
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="products">
+        <div class="product">
+            {% for el1, el2, el3 in test %}
+            <h3> {{ el1 }}</h3>
+            <p>{{ el2 }}</p>
+            <p>{{ el3 }} $</p>
+                <button class="uk-button uk-button-default"><a href="/">Добавить в корзину</a></button>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

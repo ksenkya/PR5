@@ -1,0 +1,57 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<!DOCTYPE html>
+<head lang="en">
+    <link href="{% static 'css/uikit.min.css' %}" rel="stylesheet">
+    <script src="{% static 'js/uikit.min.js' %}"></script>
+    <script src="{% static 'js/uikit-icons.min.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #7B68EE;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer {
+            background: #7B68EE;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на наш сайт!</h1>
+    </header>
+    <div class="content">
+            <h2>Общая информация о сайте</h2>
+            <p>Наш магазин предлагает широкий выбор комплектующих для ПК.
+                Проверьте качественные товары по выгодным ценам! Следите за акциями и распродажами.</p>
+            <img src="{% static 'images/photo0.png' %}" width="350"; height: auto;>
+            <img src="{% static 'images/photo1.png' %}" width="350"; height: auto;>
+            <img src="{% static 'images/photo2.png' %}" width="350"; height: auto;>
+            <img src="{% static 'images/photo3.png' %}" width="350"; height: auto;>
+            <div class="content">
+                <button class="uk-button uk-button-default"><a href="Second">Подробнее</a></button>
+            </div>
+        <footer>
+            <p>© 2024 Магазин комплектующих для ПК</p>
+        </footer>
+    </div>
+</body>
